@@ -152,7 +152,7 @@ main{
 .campoderesultado{
     background-color: #E5F1FF;
     /*background-color: #051933;*/
-    background-image: url(../images/Imagen.svg);
+    background-image: url(../images/Imagen.svg); 
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: 50% 80%;
