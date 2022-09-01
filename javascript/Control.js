@@ -83,7 +83,7 @@ function copiarTexto(){
 
     if (window.matchMedia("(min-width: 768px)").matches) {
         var campovacio = document.getElementById("textoresultado");
-        campovacio.style.backgroundImage = "url('/Encriptador/images/Imagen.svg')";
+        campovacio.style.backgroundImage = "url(../images/Imagen.svg)";
     } else {
         return;
     }
