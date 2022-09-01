@@ -30,6 +30,7 @@ function encriptarTexto(){
 
         var textoobtenido = document.getElementById("textoobtenido").value;
         var campovacio = document.getElementById("textoresultado");
+        //textoobtenido  = textoobtenido.toLowerCase();
         campovacio.style.backgroundImage = "none";
         
         var texto = "";
@@ -53,49 +54,24 @@ function encriptarTexto(){
 function desencriptarTexto(){
 
     var seguir = validarContenido();
+    let matrizcodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    
     if(seguir){
 
-        var textoobtenido = document.getElementById("textoobtenido").value;
-        var campovacio = document.getElementById("textoresultado");
-        campovacio.style.backgroundImage = "none";
-        
-        var texto = "";
-        
-        for(var i=0; i<textoobtenido.length; i++){
+        var textoobtenido = document.getElementById("textoobtenido").value; 
+        //textoobtenido = textoobtenido.toLowerCase();
 
-            if(textoobtenido[i]=="a" && textoobtenido[i+1]=="i"){
-                texto = texto + "a";
-                i=i+2;
+
+        for( let i=0; i<matrizcodigo.length;i++){
+            if(textoobtenido.includes(matrizcodigo[i][1])){
+                textoobtenido=textoobtenido.replaceAll(matrizcodigo[i][1],matrizcodigo[i][0]);
             }
-            if(textoobtenido[i]=="o" && textoobtenido[i+1]=="b" && textoobtenido[i+2]=="e" && textoobtenido[i+3]=="r"){
-                texto = texto + "o";
-                i=i+4;
-            }
-            if(textoobtenido[i]=="i" && textoobtenido[i+1]=="m" && textoobtenido[i+2]=="e" && textoobtenido[i+3]=="s"){
-                texto = texto + "i";
-                i=i+4;
-            }
-    
-            if(textoobtenido[i]=="e" && textoobtenido[i+1]=="n" && textoobtenido[i+2]=="t" && textoobtenido[i+3]=="e" && textoobtenido[i+4]=="r"){
-                texto = texto + "e";
-                i=i+5;
-            }        
-            if(i>=textoobtenido.length){
-                break;
-            }
-            if(textoobtenido[i]=="u" && textoobtenido[i+1]=="f" && textoobtenido[i+2]=="a" && textoobtenido[i+3]=="t"){
-                texto = texto + "u";
-                i=i+4;
-            }
-            else {
-                texto = texto + textoobtenido[i];
-            }
-            
         }
-        
+
         limpiarenfocar();
-        document.getElementById('textoresultado').innerText = texto;
+        document.getElementById('textoresultado').innerText = textoobtenido;
     }
+
 }
 
 function copiarTexto(){
