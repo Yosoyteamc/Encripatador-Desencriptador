@@ -1,3 +1,13 @@
+function colocarimagen(){
+    var campovacio = document.getElementById("textoresultado");
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        campovacio.style.backgroundImage = 'url(images/Imagen.svg)'; 
+    } else {
+        campovacio.style.backgroundImage = 'none';
+    }
+}
+
+
 function limpiarenfocar(){
     document.getElementById('textoobtenido').value = "";
     document.getElementById("textoresultado").focus();
@@ -81,13 +91,14 @@ function copiarTexto(){
     limpiarenfocar();
     document.getElementById("textoobtenido").focus();
 
+
     if (window.matchMedia("(min-width: 768px)").matches) {
         var campovacio = document.getElementById("textoresultado");
-        campovacio.style.backgroundImage = "url(../images/Imagen.svg)"; 
+        campovacio.style.backgroundImage = 'url(images/Imagen.svg)'; 
     } else {
         return;
     }
-   
 }
 
+window.onresize = colocarimagen;
 
