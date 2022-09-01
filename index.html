@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador/Desencriptador</title>
+    <script type="text/javascript" src="javascript/Control.js"></script>
+    <link rel="icon" href="/Encriptador/images/favicon.1647533644.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#"><img  class="logotipo" src="images/logoalura.svg" alt="Logotipo de Alura"></a>
+            <div>
+                <ul class="referencias">
+                    <li><a href="">Ver código</a></li>
+                    <li><a href="#informacion">Contacto</a></li>
+                    <li>|</li>
+                </ul>
+                <a class="boton-nav" href="https://www.aluracursos.com" target="_blank">Conocer Alura</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="campo-inserccion">
+            <textarea class="textarea" id="textoobtenido" cols="30" rows="10" autocapitalize="none" required placeholder="Escribe el texto aquí"></textarea>
+            <p><img src="images/informacion.svg" alt="Icono de mensaje importante">Solo letras minúsculas y sin acentos.</p>
+            <div> 
+                <input id="botonencriptar" onclick="encriptarTexto();" type="submit" class="botones botonencriptar" value="Encriptar" >
+                <input id="botondesencriptar" onclick="desencriptarTexto();" type="submit" class="botones botondesencriptar" value="Desencriptar">
+            </div>
+        </section>
+        <section class="campo-resultado">
+            <textarea class="textarea campoderesultado" id="textoresultado" autocapitalize="none" readonly="readonly"  cols="30" rows="10" placeholder="Aún no tenemos un resultado, ingresa el texto a codificar o decodificar."></textarea>
+            <input class="botones botoncopiar" onclick="copiarTexto();" type="submit" value="Copiar">
+        </section>
+    </main>
+    <footer>
+        <div class="informacion" id="informacion">
+            <a href=""><img src="images/instagram.svg" alt="Icono de instagram"></a>
+            <a href=""><img src="images/github.svg" alt="Icono de github"></a>
+            <a href=""><img src="images/logotipo-de-linkedin.svg" alt="Icono de Linkedin"></a>
+        </div>
+        <p class="informacion copy">Desarrollo por: <span> Juan Mosquera </span> &copy; 2022 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
