@@ -1,4 +1,7 @@
-
+function limpiarenfocar(){
+    document.getElementById('textoobtenido').value = "";
+    document.getElementById("textoresultado").focus();
+}
 
 function encriptarTexto(){
 
@@ -19,6 +22,7 @@ function encriptarTexto(){
 
     }
 
+    limpiarenfocar();
     document.getElementById('textoresultado').innerText = texto;
 
 }
@@ -31,6 +35,7 @@ function desencriptarTexto(){
     var texto = "";
 
     for(var i=0; i<textoobtenido.length; i++){
+
         if(textoobtenido[i]=="a" && textoobtenido[i+1]=="i"){
             texto = texto + "a";
             i=i+2;
@@ -60,12 +65,9 @@ function desencriptarTexto(){
             texto = texto + textoobtenido[i];
         }
         
-        document.getElementById('textoresultado').innerText = texto;
-
-        
-
     }
 
+    limpiarenfocar();
     document.getElementById('textoresultado').innerText = texto;
 }
 
@@ -76,8 +78,7 @@ function copiarTexto(){
     document.execCommand("copy");
 
     document.getElementById('textoresultado').innerText = "";
-    document.getElementById('textoobtenido').value = "";
-
+    limpiarenfocar();
     document.getElementById("textoobtenido").focus();
 
     if (window.matchMedia("(min-width: 768px)").matches) {
