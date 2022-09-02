@@ -64,8 +64,6 @@ function desencriptarTexto(){
         //textoobtenido  = textoobtenido.toLowerCase();
         campovacio.style.backgroundImage = "none";
     
-
-
         for( let i=0; i<matrizcodigo.length;i++){
             if(textoobtenido.includes(matrizcodigo[i][1])){
                 textoobtenido=textoobtenido.replaceAll(matrizcodigo[i][1],matrizcodigo[i][0]);
