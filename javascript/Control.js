@@ -89,5 +89,5 @@ function copiarTexto(){
     colocarimagen();
 }
 
-//window.onresize = colocarimagen;
+window.onresize = colocarimagen;
 
