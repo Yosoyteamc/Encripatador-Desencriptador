@@ -48,6 +48,7 @@ function encriptarTexto(){
         
         limpiarenfocar();
         document.getElementById('textoresultado').innerText = texto;
+
     }
 
 }
@@ -59,7 +60,10 @@ function desencriptarTexto(){
     if(seguir){
 
         var textoobtenido = document.getElementById("textoobtenido").value; 
-        //textoobtenido = textoobtenido.toLowerCase();
+        var campovacio = document.getElementById("textoresultado");
+        //textoobtenido  = textoobtenido.toLowerCase();
+        campovacio.style.backgroundImage = "none";
+    
 
 
         for( let i=0; i<matrizcodigo.length;i++){
@@ -69,7 +73,7 @@ function desencriptarTexto(){
         }
 
         limpiarenfocar();
-        document.getElementById('textoresultado').innerText = textoobtenido;
+        document.getElementById("textoresultado").innerText = textoobtenido;
     }
 
 }
@@ -84,9 +88,8 @@ function copiarTexto(){
     limpiarenfocar();
     document.getElementById("textoobtenido").focus();
 
-
     colocarimagen();
 }
 
-window.onresize = colocarimagen;
+//window.onresize = colocarimagen;
 
