@@ -321,7 +321,92 @@ footer{
     }
 }
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 375px) and (min-width: 240px){
+
+    header{
+        padding-top: 30px;
+        width: 260px;
+        height: 70px;
+        margin:  auto ;
+    }
+
+    nav div{
+        display: none;
+    }
+
+    .logotipo{
+        display: flex;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    main{
+        width: 260px;
+        height: 600px;
+        display: grid; 
+        margin: 10px auto;
+    }
+
+    .campo-inserccion{
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .campo-inserccion p {
+        margin: 10px 0;
+    }
+
+    .textarea{
+        width: 220px;
+        height: 100%;
+        font-size: 12px;
+    }
+
+    .botones{
+        padding: auto;
+        margin-right:0;
+        margin-bottom: 5px;
+    }
+
+    .botonencriptar{
+        width: 100%;
+    }
+    
+    .botondesencriptar{
+        width: 100%;
+    }
+
+    .campo-resultado{
+        width: 100%;
+        height: 100px;
+    }
+
+    .campoderesultado{
+        background-image: none;
+    }
+
+    .botoncopiar{
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .informacion{
+        width: 260px;
+        height: 80px;
+        padding-top: 50px;
+    }
+
+    .copy{
+        display: block;
+        text-align: start;
+    }
+}
+
+
+@media screen and (max-width: 240px) {
 
     header{
         width: 175px;
