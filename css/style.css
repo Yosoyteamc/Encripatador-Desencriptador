@@ -322,7 +322,7 @@ footer{
 }
 
 
-@media screen and (max-width: 375px) and (min-width: 240px){
+@media screen and (max-width: 375px) and (min-width: 260px){
 
     header{
         padding-top: 30px;
@@ -406,7 +406,7 @@ footer{
 }
 
 
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 260px) {
 
     header{
         width: 175px;
